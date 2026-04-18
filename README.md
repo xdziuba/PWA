@@ -6,10 +6,10 @@
 
 **Użytkownik może:**
 
-* zrobić zdjęcie zdarzenia (np. dziura w drodze, wypadek, śmieci),
-* pobrać swoją lokalizację GPS,
-* zobaczyć miejsce zdarzenia na mapie,
-* udostępnić zgłoszenie innym osobom.
+- zrobić zdjęcie zdarzenia (np. dziura w drodze, wypadek, śmieci),
+- pobrać swoją lokalizację GPS,
+- zobaczyć miejsce zdarzenia na mapie,
+- udostępnić zgłoszenie innym osobom.
 
 Aplikacja działa na urządzeniach mobilnych (Android, iOS) oraz desktopie.
 
@@ -17,19 +17,18 @@ Aplikacja działa na urządzeniach mobilnych (Android, iOS) oraz desktopie.
 
 ## ⚙️ Wykorzystane technologie
 
-* HTML5
-* CSS3 + Bootstrap 5
-* JavaScript (Vanilla JS)
-* Leaflet.js (OpenStreetMap)
-* Web APIs:
+- HTML5
+- CSS3 + Bootstrap 5
+- JavaScript (Vanilla JS)
+- Leaflet.js (OpenStreetMap)
+- Web APIs:
+  - 📸 Media Capture (kamera)
+  - 📍 Geolocation API
+  - 📤 Web Share API
 
-  * 📸 Media Capture (kamera)
-  * 📍 Geolocation API
-  * 📤 Web Share API
-* Progressive Web App:
-
-  * manifest.json
-  * service worker (offline support)
+- Progressive Web App:
+  - manifest.json
+  - service worker (offline support)
 
 ---
 
@@ -45,8 +44,8 @@ Aplikacja pobiera aktualne współrzędne użytkownika i wykorzystuje je do ozna
 
 ### 🗺️ Mapa (OpenStreetMap)
 
-* wyświetlenie mapy
-* dodanie pinezki w miejscu zdarzenia
+- wyświetlenie mapy
+- dodanie pinezki w miejscu zdarzenia
 
 ### 🖼️ Podgląd zdjęcia
 
@@ -56,17 +55,17 @@ Po wykonaniu zdjęcia pojawia się jego podgląd obok mapy.
 
 Możliwość udostępnienia zgłoszenia (zdjęcie + lokalizacja) przez:
 
-* Messenger
-* WhatsApp
-* Gmail
-* SMS
-* AirDrop
+- Messenger
+- WhatsApp
+- Gmail
+- SMS
+- AirDrop
 
 ### 📦 PWA
 
-* możliwość instalacji aplikacji na urządzeniu
-* działanie offline (Jeszcze nei działa :))
-* responsywny interfejs
+- możliwość instalacji aplikacji na urządzeniu
+- działanie offline (Jeszcze nei działa :))
+- responsywny interfejs
 
 ---
 
@@ -94,23 +93,24 @@ service-worker.js → obsługa offline
 
 | Imię    | Nazwisko | Nr. Indeksu |
 | ------- | -------- | ----------- |
-| Paweł   | Dziuba   |   233812    |
-| Jakub   | Rajca    |-            |
-| Mikołaj | Bębenek  |-            |
+| Paweł   | Dziuba   | 233812      |
+| Jakub   | Rajca    | 234740      |
+| Mikołaj | Bębenek  | 234200      |
+
 ---
 
 ## 📌 Uwagi
 
-* Aplikacja wymaga dostępu do:
+- Aplikacja wymaga dostępu do:
+  - kamery
+  - lokalizacji
 
-  * kamery
-  * lokalizacji
-* Funkcja offline dostępna po pierwszym załadowaniu aplikacji
+- Funkcja offline dostępna po pierwszym załadowaniu aplikacji
 
 ---
 
 ## 📷 Podgląd
 
-*Tutaj będzie screenshot działającej aplikacji*
+_Tutaj będzie screenshot działającej aplikacji_
 
 ---
