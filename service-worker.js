@@ -1,16 +1,16 @@
 const CACHE_NAME = "60-tka-cache-v1";
 const APP_SHELL = [
-  "/index.html",
-  "/manifest.json",
-  "/src/css/style.css",
-  "/src/js/main.js",
-  "/service-worker.js",
-  "/assets/1024x1024_logo.png",
-  "/assets/android-chrome-192x192.png",
-  "/assets/android-chrome-512x512.png",
-  "/assets/apple-touch-icon.png",
-  "/assets/favicon-16x16.png",
-  "/assets/favicon-32x32.png",
+  "./index.html",
+  "./manifest.json",
+  "./src/css/style.css",
+  "./src/js/main.js",
+  "./service-worker.js",
+  "./assets/1024x1024_logo.png",
+  "./assets/android-chrome-192x192.png",
+  "./assets/android-chrome-512x512.png",
+  "./assets/apple-touch-icon.png",
+  "./assets/favicon-16x16.png",
+  "./assets/favicon-32x32.png",
 ];
 
 self.addEventListener("install", (event) => {
