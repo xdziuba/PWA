@@ -15,7 +15,6 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
   navigator.geolocation.getCurrentPosition(
     function (position) {
       currentPos = position;
-      // alert(`Lat: ${currentPos.coords.latitude}, Lng: ${currentPos.coords.longitude}`);
 
       map = L.map("map").setView(
         [currentPos.coords.latitude, currentPos.coords.longitude],
@@ -47,4 +46,13 @@ function shareData() {
   } else {
     alert("Brak wsparcia dla Web Share API");
   }
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(() => console.log("[APP] Service Worker zarejestrowany"))
+      .catch((error) => console.error("[APP] Błąd rejestracji SW:", error));
+  });
 }
