@@ -75,6 +75,12 @@ main h2 {
   flex-wrap: wrap;
 }
 
+.action-panel > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .action-panel label {
   font-weight: 500;
   font-size: 0.9rem;
@@ -97,6 +103,45 @@ main h2 {
 .action-panel input[type="file"]:hover {
   border-color: #c0392b;
   background-color: #ffe8e8;
+}
+
+.action-panel select {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: white;
+  cursor: pointer;
+  color: #495057;
+  transition: border-color 0.2s;
+  height: 36px;
+}
+
+.action-panel select:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+.desc-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.action-panel textarea {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  resize: none;
+  height: 36px;
+  color: #495057;
+  transition: border-color 0.2s;
+}
+
+.action-panel textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
 }
 
 .btn-share {

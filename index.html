@@ -65,6 +65,20 @@
             capture="environment"
           />
         </div>
+        <div>
+          <label for="eventCategory">🏷️ Kategoria</label>
+          <select id="eventCategory">
+            <option value="dziura">🕳️ Dziura w drodze</option>
+            <option value="wypadek">🚗 Wypadek</option>
+            <option value="smieci">🗑️ Śmieci</option>
+            <option value="pozar">🔥 Pożar</option>
+            <option value="inne">❓ Inne</option>
+          </select>
+        </div>
+        <div class="desc-field">
+          <label for="eventDesc">📝 Opis zdarzenia</label>
+          <textarea id="eventDesc" placeholder="Krótki opis sytuacji..."></textarea>
+        </div>
         <button class="btn-share" onclick="shareData()">📤 Udostępnij zdarzenie</button>
       </div>
 

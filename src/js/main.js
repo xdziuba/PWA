@@ -38,11 +38,19 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
 });
 
 function shareData() {
+  const category = document.getElementById("eventCategory").selectedOptions[0].text;
+  const desc = document.getElementById("eventDesc").value.trim();
+  const locationText = currentPos
+    ? `Lokalizacja: ${currentPos.coords.latitude}, ${currentPos.coords.longitude}`
+    : "Lokalizacja nieznana";
+
+  const text = `${category}\n${desc ? desc + "\n" : ""}${locationText}`;
+
   if (navigator.share) {
     navigator.share({
-      title: "Zgłoszenie zdarzenia",
-      text: `Lokalizacja: ${currentPos.coords.latitude}, ${currentPos.coords.longitude}`,
-      files: [photo],
+      title: "Zgłoszenie zdarzenia – 60-tka",
+      text,
+      files: photo ? [photo] : undefined,
     });
   } else {
     alert("Brak wsparcia dla Web Share API");
