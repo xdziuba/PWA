@@ -21,6 +21,7 @@ Aplikacja działa na urządzeniach mobilnych (Android, iOS) oraz desktopie.
 - CSS3 + Bootstrap 5
 - JavaScript (Vanilla JS)
 - Leaflet.js (OpenStreetMap)
+- Nominatim API (OpenStreetMap) – reverse geocoding
 - Web APIs:
   - 📸 Media Capture (kamera)
   - 📍 Geolocation API
@@ -47,13 +48,25 @@ Aplikacja pobiera aktualne współrzędne użytkownika i wykorzystuje je do ozna
 - wyświetlenie mapy
 - dodanie pinezki w miejscu zdarzenia
 
+### 📍 Adres zdarzenia (Reverse Geocoding)
+
+Na podstawie współrzędnych GPS aplikacja pobiera czytelny adres (ulica, miasto) z API Nominatim i wyświetla go na mapie.
+
+### 🏷️ Kategoria zdarzenia
+
+Użytkownik wybiera typ zdarzenia spośród: dziura w drodze, wypadek, śmieci, pożar, inne.
+
+### 📝 Opis zdarzenia
+
+Możliwość dodania krótkiego opisu przed udostępnieniem zgłoszenia.
+
 ### 🖼️ Podgląd zdjęcia
 
 Po wykonaniu zdjęcia pojawia się jego podgląd obok mapy.
 
 ### 📤 Udostępnianie
 
-Możliwość udostępnienia zgłoszenia (zdjęcie + lokalizacja) przez:
+Zgłoszenie zawiera zdjęcie, kategorię, opis oraz lokalizację. Możliwość udostępnienia przez:
 
 - Messenger
 - WhatsApp
