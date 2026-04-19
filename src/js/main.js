@@ -30,6 +30,17 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
         currentPos.coords.latitude,
         currentPos.coords.longitude,
       ]).addTo(map);
+
+      const lat = currentPos.coords.latitude;
+      const lon = currentPos.coords.longitude;
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
+        .then(r => r.json())
+        .then(data => {
+          const addressBox = document.getElementById("address");
+          addressBox.textContent = "📍 " + data.display_name;
+          addressBox.style.display = "block";
+        })
+        .catch(() => {});
     },
     function (error) {
       alert("Błąd pobierania lokalizacji: " + error.message);
