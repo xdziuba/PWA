@@ -1,4 +1,5 @@
 let currentPos;
+let currentAddress;
 let photo;
 let map;
 let marker;
@@ -36,8 +37,9 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
       fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
         .then(r => r.json())
         .then(data => {
+          currentAddress = data.display_name;
           const addressBox = document.getElementById("address");
-          addressBox.textContent = "📍 " + data.display_name;
+          addressBox.textContent = "📍 " + currentAddress;
           addressBox.style.display = "block";
         })
         .catch(() => {});
@@ -51,7 +53,9 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
 function shareData() {
   const category = document.getElementById("eventCategory").selectedOptions[0].text;
   const desc = document.getElementById("eventDesc").value.trim();
-  const locationText = currentPos
+  const locationText = currentAddress
+    ? `Lokalizacja: ${currentAddress} (${currentPos.coords.latitude}, ${currentPos.coords.longitude})`
+    : currentPos
     ? `Lokalizacja: ${currentPos.coords.latitude}, ${currentPos.coords.longitude}`
     : "Lokalizacja nieznana";
 
