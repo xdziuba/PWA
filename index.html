@@ -9,7 +9,6 @@
 
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="src/css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,6 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link rel="stylesheet" href="src/css/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -39,45 +39,62 @@
 
   <body>
     <header>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="assets/1024x1024_logo.png" width="200" height="200" />
-        </div>
-        <div class="col-md-6">
-          <h1>60-tka 🚨 - twoje lokalne zdarzenia!</h1>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="assets/1024x1024_logo.png" alt="Logo 60-tka" />
+          </div>
+          <div class="col">
+            <h1>60-tka 🚨</h1>
+            <p class="subtitle">Twoje lokalne zdarzenia w jednym miejscu</p>
+          </div>
         </div>
       </div>
     </header>
-    <main>
-      <h2>Dodaj nowe zdarzenie:</h2>
-      <nav>
-        <input
-          type="file"
-          id="photoCapture"
-          accept="image/*"
-          capture="environment"
-        />
-        <button onclick="shareData()">Udostępnij zdarzenie</button>
-      </nav>
 
-      <div class="container">
-        <div class="row">
+    <main>
+      <h2>📋 Dodaj nowe zdarzenie</h2>
+
+      <div class="action-panel">
+        <div>
+          <label for="photoCapture">📸 Zdjęcie zdarzenia</label>
+          <input
+            type="file"
+            id="photoCapture"
+            accept="image/*"
+            capture="environment"
+          />
+        </div>
+        <button class="btn-share" onclick="shareData()">📤 Udostępnij zdarzenie</button>
+      </div>
+
+      <div class="container-fluid px-0">
+        <div class="row g-4">
           <div class="col-md-6">
-            <div id="map" style="height: 300px"></div>
+            <div class="card-panel">
+              <h3>🗺️ Mapa zdarzenia</h3>
+              <div id="map"></div>
+            </div>
           </div>
 
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <img
-              id="photoPreview"
-              src=""
-              alt="Podgląd zdjęcia"
-              style="max-width: 100%; display: none; border-radius: 10px"
-            />
+          <div class="col-md-6">
+            <div class="card-panel">
+              <h3>🖼️ Podgląd zdjęcia</h3>
+              <div class="d-flex align-items-center justify-content-center">
+                <img id="photoPreview" src="" alt="Podgląd zdjęcia" />
+                <div class="photo-placeholder" id="photoPlaceholder">
+                  <span>📷</span>
+                  Zdjęcie pojawi się tutaj
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <footer>
+      60-tka &copy; 2025 - Dziuba, Rajca, Bębenek
+    </footer>
   </body>
 </html>
