@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  color: #212529;
+}
+
+/* ========== HEADER ========== */
+
+header {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: white;
+  padding: 20px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header .row {
+  align-items: center;
+}
+
+header img {
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+header p.subtitle {
+  margin-top: 6px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* ========== MAIN ========== */
+
+main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #c0392b;
+  border-left: 4px solid #e74c3c;
+  padding-left: 12px;
+}
+
+/* ========== PANEL AKCJI ========== */
+
+.action-panel {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.action-panel label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.action-panel input[type="file"] {
+  border: 2px dashed #e74c3c;
+  border-radius: 8px;
+  padding: 8px 14px;
+  background-color: #fff5f5;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #495057;
+  transition: border-color 0.2s;
+}
+
+.action-panel input[type="file"]:hover {
+  border-color: #c0392b;
+  background-color: #ffe8e8;
+}
+
+.btn-share {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.btn-share:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(231, 76, 60, 0.45);
+}
+
+.btn-share:active {
+  transform: translateY(0);
+}
+
+/* ========== KARTY (mapa + zdjęcie) ========== */
+
+.card-panel {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.card-panel h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#map {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  height: 320px;
+  width: 100%;
+}
+
+#photoPreview {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  object-fit: cover;
+  display: none;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 320px;
+  background: #f8f9fa;
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+.photo-placeholder span {
+  font-size: 2.5rem;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  text-align: center;
+  padding: 24px;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #adb5bd;
+  border-top: 1px solid #dee2e6;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+    margin-top: 12px;
+  }
+
+  .action-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-share {
+    width: 100%;
+    text-align: center;
+  }
+}

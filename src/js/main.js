@@ -10,6 +10,7 @@ document.getElementById("photoCapture").addEventListener("change", (e) => {
     const imageURL = URL.createObjectURL(photo);
     preview.src = imageURL;
     preview.style.display = "block";
+    document.getElementById("photoPlaceholder").style.display = "none";
   }
 
   navigator.geolocation.getCurrentPosition(
